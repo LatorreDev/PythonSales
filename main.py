@@ -7,9 +7,11 @@ clients = 'Pablo, Ricardo, '
 def create_client(client_name):
     global clients
 
-   # input(str("Añada el nombre del cliente"))
-    clients += client_name
-    _add_comma()
+    if client_name not in clients:
+        clients += client_name
+        _add_comma()
+    else:
+        print('Client already exist in client\'s list')
 
 
 def list_clients():
