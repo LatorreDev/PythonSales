@@ -70,6 +70,7 @@ def _print_welcome():
     print ('[R]etrieve client')
     print ('[U]pdate')
     print ('[D]elete client')
+    print ('[L]ist client')
     print ('[S]earch client')
     print ('[E]xit')
 
@@ -100,6 +101,9 @@ if __name__ == '__main__':
     elif command == 'D':
         client_name = _get_client_name()
         delete_client(client_name)
+
+    elif command == 'L':
+        list_clients()
 
     elif command == 'S':
         client_name = _get_client_name()
