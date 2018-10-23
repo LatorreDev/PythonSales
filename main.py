@@ -36,6 +36,14 @@ def delete_client(client_name):
 def search_client(client_name):
     clients_list = clients.split(',')
 
+    for client in clients_list:
+        if client != client_name:
+            continue
+        else:
+            return True
+
+
+
 def list_clients():
     global clients
 
@@ -98,7 +106,7 @@ if __name__ == '__main__':
         found = search_client(client_name)
 
         if found:
-            print('Client is in the client\'s list)
+            print('Client is in the client\'s list')
         else:
             print('The client: {} is not in our client\'s list'.format(client_name) )
 
