@@ -35,6 +35,8 @@ def _print_welcome():
     _space_line()
     print ('what would you want to do today?')
     print ('[C]reate client')
+    print ('[R]etrieve client')
+    print ('[U]pdate')
     print ('[D]elete client')
     print ('[E]xit')
 
@@ -43,11 +45,16 @@ if __name__ == '__main__':
     _print_welcome()
 
     command = input()
+    command = command.upper()
 
     if command == 'C':
         client_name = input('What is the client name?: ')
         create_client(client_name)
         list_clients()
+    elif command == 'R':
+        pass
+    elif command == 'U':
+        pass
     elif command == 'D':
         pass
     elif command == 'E':
