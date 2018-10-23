@@ -33,6 +33,8 @@ def delete_client(client_name):
     else:
         not_in_clients()
 
+def search_client(client_name):
+    clients_list = clients.split(',')
 
 def list_clients():
     global clients
@@ -60,6 +62,7 @@ def _print_welcome():
     print ('[R]etrieve client')
     print ('[U]pdate')
     print ('[D]elete client')
+    print ('[S]earch client')
     print ('[E]xit')
 
 def _get_client_name():
@@ -89,6 +92,15 @@ if __name__ == '__main__':
     elif command == 'D':
         client_name = _get_client_name()
         delete_client(client_name)
+
+    elif command == 'S':
+        client_name = _get_client_name()
+        found = search_client(client_name)
+
+        if found:
+            print('Client is in the client\'s list)
+        else:
+            print('The client: {} is not in our client\'s list'.format(client_name) )
 
     elif command == 'E':
         _space_line
