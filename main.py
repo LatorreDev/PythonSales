@@ -4,6 +4,7 @@
 
 clients = 'Pablo, Ricardo, '
 
+
 def create_client(client_name):
     global clients
 
@@ -13,8 +14,10 @@ def create_client(client_name):
     else:
         print('Client already exist in client\'s list')
 
+
 def retrieve_client():
     pass
+
 
 def update_client(client_name, updated_client_name):
     global clients
@@ -24,6 +27,7 @@ def update_client(client_name, updated_client_name):
     else:
         not_in_clients()
 
+
 def delete_client(client_name):
     global clients
 
@@ -32,6 +36,7 @@ def delete_client(client_name):
         list_clients()
     else:
         not_in_clients()
+
 
 def search_client(client_name):
     clients_list = clients.split(',')
@@ -50,16 +55,20 @@ def list_clients():
     print ('The clients list is: ')
     print (clients)
 
+
 def _add_comma():
     global clients
 
     clients += ','
 
+
 def _space_line():
     print ('*' * 50)
 
+
 def not_in_clients():
     print('Client is not in clients list')
+
 
 def _print_welcome():
     _space_line()
@@ -73,6 +82,7 @@ def _print_welcome():
     print ('[L]ist client')
     print ('[S]earch client')
     print ('[E]xit')
+    
 
 def _get_client_name():
     return input('What is the client name?: ')
