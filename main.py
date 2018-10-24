@@ -70,6 +70,15 @@ def not_in_clients():
     print('Client is not in clients list')
 
 
+def _get_client_name():
+    client_name = None
+    
+    while not client_name:
+        client_name = input('What is the client name?: ')
+
+    return client_name
+
+
 def _print_welcome():
     _space_line()
     print('Welcome to VentasLab')
@@ -82,10 +91,6 @@ def _print_welcome():
     print ('[L]ist client')
     print ('[S]earch client')
     print ('[E]xit')
-    
-
-def _get_client_name():
-    return input('What is the client name?: ')
 
 if __name__ == '__main__':
 
